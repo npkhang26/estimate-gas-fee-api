@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  api-estimate-gas:
+    image: api-estimate-gas
+    env_file:
+      - .env
+    container_name: api-estimate-gas
+    build: ./
+    restart: always
+    ports:
+      - '4000:4000'
